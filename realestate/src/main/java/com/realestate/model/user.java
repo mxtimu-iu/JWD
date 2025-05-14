@@ -16,7 +16,7 @@ public class user {
     @Column(nullable = false)
     private String password;
 
-    @Column(name = "first_name")
+    @Column(name = "firstName")
     private String firstName;
 
     @Column(unique = true)
@@ -24,26 +24,27 @@ public class user {
 
     private String role;
     private String gender;
-    private boolean guest;
+    @Column(name = "sign_In_As_Guest")
+    private boolean signInAsGuest;
 
-    @Column(name = "last_name")
+    @Column(name = "lastName")
     private String lastName;
 
-    private String createdAt;
+//    private String createdAt;
 
     // Constructors
 //    public User() {}
 
-    public user(String username, String password, String email, String role, String gender, boolean guest, String firstName, String lastName, String createdAt) {
+    public user(String username, String password, String email, String role, String gender, boolean signInAsGuest, String firstName, String lastName) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.role = role;
         this.gender = gender;
-        this.guest = guest;
+        this.signInAsGuest = signInAsGuest;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.createdAt = createdAt;
+//        this.createdAt = createdAt;
     }
 
     // Getters and Setters
@@ -96,11 +97,11 @@ public class user {
     }
 
     public boolean isGuest() {
-        return guest;
+        return signInAsGuest;
     }
 
     public void setGuest(boolean guest) {
-        this.guest = guest;
+        this.signInAsGuest = guest;
     }
 
     public String getFirstName() {
@@ -118,13 +119,13 @@ public class user {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
+// there is no need for this actually so i am just going to remove it by commenting it out
+//    public String getCreatedAt() {
+//        return createdAt;
+//    }
+//
+//    public void setCreatedAt(String createdAt) {
+//        this.createdAt = createdAt;
+//    }
 }
 

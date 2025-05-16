@@ -48,6 +48,6 @@ build/
 
 # Sensitive config
 src/main/resources/application.properties
-
+application.properties
 # Maven local repo (optional)
 /.mvn/

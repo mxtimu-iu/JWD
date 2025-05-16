@@ -31,3 +31,23 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Build outputs
+/target/
+
+# Logs
+*.log
+
+# theese are the IDE config files
+*.iml
+.idea/
+.vscode/
+
+# files that i i do not need to track
+.DS_Store
+
+# Sensitive config
+src/main/resources/application.properties
+
+# Maven local repo (optional)
+/.mvn/
